@@ -1,120 +1,54 @@
+/* eslint-disable no-unassigned-vars */
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+// 변수 선언은 let, const 로만 해야 함  (var 사용하지 말기!)
+// JSX 네 { .. }  인에 유효한 JavaScript 표현식 사용 가능 
+//    https://ko.legacy.reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
+// JSX 안에선 if 사용 불가.  삼항연산자 가능.
+
+
+// 스타일링 하는 방법 (CSS)
+// 방법1: 내부에 적는 방법
+// 방법2: 외부 파일에 작성
+// 방법3: 라이브러리 사용 (ex: 부트스트랩, component-styled)
+
+
+let a = 10;
+const b = 20;
+
+// 화면이 그려질때마다 App() 함수가 실행되고 리턴된다 -> 그려진다
 function App() {
   const [count, setCount] = useState(0)
 
+  let c;
+  console.log(`c=${c}`);
+
+  // 스타일 object
+  const mystyle = {
+    color: "red",
+  };
+
+  // JSX 는 '한개의 element 만' 리턴 가능하다! 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      {/*
+        JSX 주석
+        여러줄 가능
+      */}
+      <div>안녕하세요? {a}+{b} = {a + b}</div>
+      <div>{a === b ? "같다" : "다르다"}</div>
+      {/* 조건부 렌더링, SCE 사용 */}
+      <h1>해당태크 {b === 20 && '20입니다'}</h1>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <div style={mystyle}>안녕</div>
+      <div style={{ color: 'blue' }}>안녕</div>
+      {/* JSX 에서는 class 사용하지 말고 className 사용 */}
+      <div className="box-style">안녕3</div>
     </>
   )
 }
