@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
 
 // box 컴포넌트가 마운팅이 되면 createBoxStyle 함수를 prop으로 전달됨

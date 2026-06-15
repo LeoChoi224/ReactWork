@@ -3,7 +3,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App.jsx'   // 앱구조, JSX기초, CSS 적용
 import App041 from './04/App041.jsx'  // component
@@ -20,13 +20,15 @@ import App103 from './10/App103.jsx'  // page - component 구조
 import App104 from './10/App104.jsx'  // props
 import App141 from './14/App141.jsx'  // react-router-dom, react-bootstrap
 import App152 from './152/App152.jsx' // CRUD
+import App201 from './20/App201.jsx'  // form 에서 value, key, defaultValue, 리스트에서 key
+import App181 from './181/App181.jsx' // Redux 사용 안 한 경우. 하위 component에 데이터 전달하는 방식의 문제점
+import App182 from './182/App182.jsx' // Reducx 사용 redux toolkit
+import App184 from './184/App184.jsx' // useContext
+import BookApp from './R-Book-Frontend/BookApp.jsx'  // 백엔드 연동 R-Book 도서관리
 
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App152 />
-  </BrowserRouter>
-  // <StrictMode>
-  //   <App />
-  // </StrictMode>,
-)
+
+    <BookApp />
+    
+  )
