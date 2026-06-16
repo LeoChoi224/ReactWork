@@ -25,10 +25,11 @@ import App181 from './181/App181.jsx' // Redux 사용 안 한 경우. 하위 com
 import App182 from './182/App182.jsx' // Reducx 사용 redux toolkit
 import App184 from './184/App184.jsx' // useContext
 import BookApp from './R-Book-Frontend/BookApp.jsx'  // 백엔드 연동 R-Book 도서관리
+import RBoardApp from './R-Board-Frontend/RBoardApp.jsx'  // 백엔드 연동 R-Board 게시글 관리
 
 
 createRoot(document.getElementById('root')).render(
 
-    <BookApp />
+    <RBoardApp />
     
   )
