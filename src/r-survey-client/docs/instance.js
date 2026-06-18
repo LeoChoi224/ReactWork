@@ -11,6 +11,7 @@ const instance = axios.create({
     put: {
       'Content-Type': "application/json;charset=utf-8",
     },
-  }});
+  }
+});
 
 export default instance;
