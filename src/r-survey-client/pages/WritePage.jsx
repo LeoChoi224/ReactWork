@@ -48,7 +48,7 @@ const WritePage = () => {
     e.preventDefault();
 
     // 필수 데이터 유효성 검사
-    if (!survey.name || !survey.age || survey.age < 0 || !survey.gender || !survey.area || !survey.favorite) {
+    if (!survey.name || !survey.age || survey.age <= 0 || !survey.gender || !survey.area || !survey.favorite) {
       setValidated(true); // 에러가 있는 상태에서 제출 시 에러 메시지 표시 활성화
       return;
     }
