@@ -1,4 +1,5 @@
-import useState from 'react';
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const StyleItemBoxDiv = styled.div`
@@ -40,18 +41,18 @@ const ListPage = () => {
     }
   };
 
-  // const handleChangeId = e => {
-  //   console.log('Id:', e.target.value);
-  //   setPost({...post, id: e.target.value});
-  // };
-  // const handleChangeTitle  = e => {
-  //   console.log('Title:', e.target.value);
-  //   setPost({...post, title: e.target.value});    
-  // };
-  // const handleChangeContent  = e => {
-  //   console.log('Content:', e.target.value);
-  //   setPost({...post, content: e.target.value});    
-  // };
+  const handleChangeId = e => {
+    console.log('Id:', e.target.value);
+    setPost({...post, id: e.target.value});
+  };
+  const handleChangeTitle  = e => {
+    console.log('Title:', e.target.value);
+    setPost({...post, title: e.target.value});    
+  };
+  const handleChangeContent  = e => {
+    console.log('Content:', e.target.value);
+    setPost({...post, content: e.target.value});    
+  };
 
   const handleForm = e => {
     console.log(e.target.name, e.target.value);   // name-value 확인
